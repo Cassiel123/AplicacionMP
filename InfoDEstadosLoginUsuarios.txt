@@ -1,0 +1,1 @@
+En este diagrama de estados se explica cuál es el flujo que ocurre en un inicio de sesión. En caso de que las credenciales sean incorrectas, se solictaran otra vez. En caso correcto, dependiendo si el usuario es un usuario normal o un operador, accederá a las opciones correspondientes. Al terminar, el usuario saldrá del sistema. 
