@@ -1,0 +1,24 @@
+Los patrones que hemos tenido en cuenta a la hora de realizar el diseño global
+de la aplicación son:
+•Builder:
+Para crear personajes con diferentes propiedades armas, habilidades y
+esbirros cada uno.
+•Factory Method:
+Utilizamos este patrón para la creación de objetos de las clases Admin y
+Client. De esta manera, a la hora de que un usuario se registre por primera
+vez en el sistema, se instanciará un objeto u otro en función de lo que el
+usuario indique, haciendo uso de las clases AdminCreator y ClientCreator
+que implementan la interfaz UserCreator.
+4
+• Facade
+Con el uso de este patrón de diseño se facilita la interacción de los
+distintos usuarios con el sistema. Esto se consigue gracias a la clase Menu,
+la cual interactuarácon el resto de las clases de la aplicación según la
+acción que el usuario seleccione de entre todas las posibles opciones que
+muestre Menú.
+• Singleton
+El patrón singleton es usado en la clase System para que no exista más de
+una instancia del sistema.
+• Observer
+Por último, utilizamos el patrón observer para notificar a los clientes sobre
+la publicación de las diferentes ofertas de combate
