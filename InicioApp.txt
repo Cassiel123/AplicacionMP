@@ -1,8 +1,0 @@
-El userController seria usando un patron singelton ya que queremos
-asegurarnos que solo esta esa instancia del objeto
-ya que va a ser un pilar fundamental del flujo de la aplicacion
-Nos basariamos en primero ejecutar el metodo
-loginOrSignin para obtener las credenciales del usuario,
-con eso pasarselo a userController y poder arrancar el menu
-desde MPgame, hay un menu abstracto ya que segun el tipo de usuario
-arrancaremos un menu o otro 

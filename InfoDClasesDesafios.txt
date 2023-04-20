@@ -1,6 +1,0 @@
-Para gestionar los desafios usamos el patron Observer
-que permite notificar a un usuario cada vez que otro
-lo desafie.
-La interfaz GestorDesafios es la interfaz para sujetos, el Observable
-y la interfaz notificador es el observer que cuando se envia un desafio notifica
-al usuario desafiado

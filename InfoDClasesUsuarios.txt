@@ -1,7 +1,0 @@
-	Se utiliza el patron factory para la creacion de usuarios
-	Esto permite diferenciar entre un usuario normal y un operador
-	y ademas proporciona flexibilidad por si en un futuro se quieren
-	añadir mas usuarios.
-	Utilizando la interfaz usuarios asbtraemos el registrar o dar de baja
-	a un usuario, despues en CreadorUsuarios soobrescribimos el metodo
-	Registrar, y segun el tipo de usuario nos crea un objeto usuario y operador

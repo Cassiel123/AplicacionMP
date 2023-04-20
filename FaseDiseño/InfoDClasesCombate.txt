@@ -1,0 +1,8 @@
+Para el diseño del combate se ha utilizado un patron
+Strategy, para asi poder encapsular el calculo del
+potencial de ataque de cada tipo de personaje,
+asi si en un futuro se desean añadir mas sin
+cambiar el contexto.
+
+Combate solicita el Potencial mediante getPotencial
+y segun el tipo, se calculara de una forma u otra
