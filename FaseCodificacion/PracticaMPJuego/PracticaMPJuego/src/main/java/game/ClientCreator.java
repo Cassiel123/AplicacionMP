@@ -35,36 +35,13 @@ public class ClientCreator implements UserCreator {
         String password = sc.nextLine();
         System.out.print("Introduzca su nombre: ");
         String name = sc.nextLine();
-        System.out.print("Introduzca su planeta de origen: ");
-        String planet = sc.nextLine();
-        System.out.print("Introduzca su especie: ");
-        String specie = sc.nextLine();
-        String email = askForEmail();
+
         
         int id = system.getClients().size() + 1;
         
-        if ("kromagg".equals(specie.toLowerCase())) {
-            String license;
-            boolean correct;
-            
-            do {
-                System.out.print("¿Tiene licencia? Introduzca 1 para SI y 0 para NO: ");
-                license = sc.nextLine();
-                correct = license.equals("0") || license.equals("1");
-                
-                if (!correct) {
-                    System.out.println("Número introducido no válido\n");
-                }
-            } while (!correct);
-            
-            if (license.equals("1")) {
-                return new Kromagg(nick, password, name, planet, specie, email, true, id);
-            } else {
-                return new Kromagg(nick, password, name, planet, specie, email, false, id);
-            }
-        }
+
         
-        return new Client(nick, password, name, planet, specie, email, id);
+        return new Client(nick, password, name, id);
     }
     
     /*

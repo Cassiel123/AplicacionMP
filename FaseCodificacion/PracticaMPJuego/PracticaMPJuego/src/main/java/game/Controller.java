@@ -45,6 +45,7 @@ class Controller {
         }
         return system;
     }
+
     //Devuelve los usuarios que sean de la clase Client pertenecientes a la lista de usuarios
     public List<Client> getClients() {
         List<Client> list = new ArrayList<>();
@@ -78,8 +79,8 @@ class Controller {
         users.add(user);
         modifyFile(usersPath, users);
     }
-    
-    public void addUser(User user){
+
+    public void addUser(User user) {
         users.add(user);
     }
 
@@ -108,37 +109,6 @@ class Controller {
             if (nick.equals(user.getNick())) {
                 if ("Client".equals(user.getClassName())) {
                     Client client = (Client) user;
-                    //Al ser cliente, comprobamos si es sospechoso de fraude
-                    if (client.isFraudSuspect()) {
-                        System.out.println("No tiene permitido entrar en la aplicación");
-                        return null;
-                    } else {
-                        //Comprobamos si está penalizado
-                        if (client.getBannedDate() == null) {
-                            correct = checkPassword(password, user);
-                            if (correct) {
-                                return user;
-                            } else {
-                                return null;
-                            }
-                        } else {
-                            //En caso de estar penalizado, comprobamos si han pasado los 5 días
-                            LocalDateTime bannedDate = LocalDateTime.now();
-                            LocalDateTime penalization = client.getBannedDate().plusDays(5);
-                            if (bannedDate.isAfter(penalization)) {
-                                client.resetDate();
-                                correct = checkPassword(password, user);
-                                if (correct) {
-                                    return user;
-                                } else {
-                                    return null;
-                                }
-                            } else {
-                                System.out.println("No tiene permitido entrar en la aplicación");
-                                return null;
-                            }
-                        }
-                    }
                 } else {
                     //Si es administrador comprobamos la contraseña
                     correct = checkPassword(password, user);
@@ -167,5 +137,5 @@ class Controller {
             i++;
         } while (!element.getNick().equals(client.getNick()) && (i < list.size()));
     }
-
+}
   

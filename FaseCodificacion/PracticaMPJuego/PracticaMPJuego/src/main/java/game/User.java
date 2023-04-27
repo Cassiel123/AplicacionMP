@@ -18,9 +18,7 @@ public abstract class User implements Serializable {
     public String getPassword() {
         return password;
     }
-    
-    public abstract void receiveNotification(String notification);
-    
+
     //Devuelve el tipo de usuario (client o admin)
     public abstract String getClassName();
 }
